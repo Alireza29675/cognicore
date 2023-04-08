@@ -1,27 +1,31 @@
 {
-  "name": "gptkit",
+  "name": "@gptkit/monorepo",
   "version": "0.0.0",
-  "description": "A simple GPT wrapper for node.js",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "description": "Tools for building and deploying GPT powered apps",
+  "repository": "https://github.com/Alireza29675/gptkit",
+  "license": "MIT",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npx only-allow pnpm",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "clean": "pnpm -r --parallel exec rimraf dist .turbo node_modules"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Alireza29675/gptkit.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Alireza29675/gptkit/issues"
-  },
-  "homepage": "https://github.com/Alireza29675/gptkit#readme",
   "devDependencies": {
-    "typescript": "^5.0.4"
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "latest",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.9.1",
+    "turbo": "^1.7.0",
+    "typescript": "^4.9.4"
   }
 }
