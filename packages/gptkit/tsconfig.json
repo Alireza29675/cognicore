@@ -1,0 +1,9 @@
+{
+  "extends": "@gptkit/tsconfig/base.json",
+  "display": "gptkit",
+  "compilerOptions": {
+    "declaration": true,
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
+}

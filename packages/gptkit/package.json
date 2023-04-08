@@ -1,0 +1,29 @@
+{
+  "name": "gptkit",
+  "version": "0.0.0",
+  "description": "Tools for building and deploying GPT powered apps",
+  "source": "src/index.ts",
+  "main": "dist/umd/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup --config node:@gptkit/rollup-config --watch",
+    "build": "rollup --config node:@gptkit/rollup-config --environment NODE_ENV:production",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@gptkit/eslint-config": "workspace:*",
+    "@gptkit/rollup-config": "workspace:*",
+    "@gptkit/tsconfig": "workspace:*",
+    "@types/node": "^18.7.16",
+    "typescript": "^4.9.4"
+  },
+  "rollup": {
+    "name": "GPTKit"
+  }
+}
