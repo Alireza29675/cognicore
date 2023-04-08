@@ -28,6 +28,7 @@
     "name": "GPTKitChat"
   },
   "dependencies": {
+    "openai": "^3.2.1",
     "uuid": "^9.0.0"
   }
 }

@@ -1,1 +1,1 @@
-export { createChat } from '@gptkit/chat'
+export { createChat, setOpenAIKey } from '@gptkit/chat'

@@ -1,2 +1,3 @@
-export { default } from './createChat';
-export { default as Chat } from './Chat';
+export { default as createChat } from './createChat';
+export { default } from './Chat';
+export { setOpenAIKey } from './openai'
