@@ -8,6 +8,7 @@ import replace from '@rollup/plugin-replace';
 import terser from '@rollup/plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from '@rollup/plugin-typescript';
+import dts from 'rollup-plugin-dts';
 
 const pkg = JSON.parse(readFileSync(resolve(cwd(), './package.json')));
 const isProd = process.env.NODE_ENV === 'production';
@@ -24,6 +25,15 @@ const onwarn = (warning, rollupWarn) => {
     rollupWarn(warning);
   }
 };
+
+export const dtsConfig = defineConfig({
+  input: pkg.source,
+  output: {
+    file: 'dist/esm/index.d.ts',
+    format: 'es',
+  },
+  plugins: [dts()],
+});
 
 export const esmConfig = defineConfig({
   input: pkg.source,
@@ -65,4 +75,4 @@ export const umdConfig = defineConfig({
   ],
 });
 
-export default isProd ? [esmConfig, umdConfig] : esmConfig;
+export default isProd ? [esmConfig, umdConfig, dtsConfig] : [esmConfig, dtsConfig];
