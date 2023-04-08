@@ -1,3 +1,2 @@
-export function createChat() {
-  return 'Hello, World!'
-}
+export { default } from './createChat';
+export { default as Chat } from './Chat';
