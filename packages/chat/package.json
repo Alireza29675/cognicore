@@ -1,7 +1,7 @@
 {
-  "name": "gptkit",
+  "name": "@gptkit/chat",
   "version": "0.0.0",
-  "description": "Tools for building and deploying GPT powered apps",
+  "description": "Chat related utilities for GPTKit",
   "source": "src/index.ts",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
@@ -16,10 +16,6 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "@gptkit/core": "workspace:*",
-    "@gptkit/chat": "workspace:*"
-  },
   "devDependencies": {
     "@gptkit/eslint-config": "workspace:*",
     "@gptkit/rollup-config": "workspace:*",
@@ -28,6 +24,6 @@
     "typescript": "^4.9.4"
   },
   "rollup": {
-    "name": "GPTKit"
+    "name": "GPTKitChat"
   }
 }

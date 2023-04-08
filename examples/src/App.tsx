@@ -1,9 +1,9 @@
-import { sum } from 'gptkit'
+import { createChat } from 'gptkit'
 
 function App() {
   return (
     <div className="App">
-      {sum(2, 5)}
+      {createChat()}
     </div>
   )
 }
