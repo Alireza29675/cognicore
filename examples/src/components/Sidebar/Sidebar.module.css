@@ -5,4 +5,28 @@
   min-width: 300px;
   overflow: auto;
   background-color: var(--black);
+
+  .header {
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+    
+    .logo {
+      width: 60px;
+    }
+
+    .title {
+      margin: 0;
+      margin-bottom: 0.3rem;
+    }
+
+    .chip {
+      background-color: var(--secondary-color);
+      color: var(--black);
+      font-weight: bold;
+      padding: 0.1rem 0.5rem;
+      font-size: 0.8rem;
+      border-radius: 0.2rem;
+    }
+  }
 }

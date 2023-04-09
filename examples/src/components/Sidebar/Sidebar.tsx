@@ -7,7 +7,13 @@ interface IProps {
 function Sidebar({ pages }: IProps) {
   return (
     <aside className={styles.Sidebar}>
-      <h1>GPTkit </h1>
+      <header className={styles.header}>
+        <img className={styles.logo} src="/images/gptkit-logo.png" alt="GPTKit" />
+        <div>
+          <h1 className={styles.title}>GPTKit</h1>
+          <span className={styles.chip}>dev</span>
+        </div>
+      </header>
       <ul>
         {pages.map(({ metadata }) => (
           <li key={metadata.route}>
