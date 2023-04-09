@@ -25,5 +25,8 @@
   },
   "rollup": {
     "name": "GPTKitCore"
+  },
+  "dependencies": {
+    "openai": "^3.2.1"
   }
 }

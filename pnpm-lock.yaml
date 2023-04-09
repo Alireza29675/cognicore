@@ -53,6 +53,7 @@ importers:
 
   packages/chat:
     specifiers:
+      '@gptkit/core': workspace:*
       '@gptkit/eslint-config': workspace:*
       '@gptkit/rollup-config': workspace:*
       '@gptkit/tsconfig': workspace:*
@@ -62,6 +63,7 @@ importers:
       typescript: ^4.9.4
       uuid: ^9.0.0
     dependencies:
+      '@gptkit/core': link:../core
       openai: 3.2.1
       uuid: 9.0.0
     devDependencies:
@@ -78,7 +80,10 @@ importers:
       '@gptkit/rollup-config': workspace:*
       '@gptkit/tsconfig': workspace:*
       '@types/node': ^18.7.16
+      openai: ^3.2.1
       typescript: ^4.9.4
+    dependencies:
+      openai: 3.2.1
     devDependencies:
       '@gptkit/eslint-config': link:../../tooling/eslint-config
       '@gptkit/rollup-config': link:../../tooling/rollup-config
