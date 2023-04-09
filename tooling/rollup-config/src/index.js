@@ -9,6 +9,7 @@ import terser from '@rollup/plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
+import json from '@rollup/plugin-json';
 
 const pkg = JSON.parse(readFileSync(resolve(cwd(), './package.json')));
 const isProd = process.env.NODE_ENV === 'production';
@@ -48,6 +49,7 @@ export const esmConfig = defineConfig({
     }),
     ...defaultPlugins,
     typescript(),
+    json(),
   ],
 });
 
@@ -72,6 +74,7 @@ export const umdConfig = defineConfig({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
     terser(),
+    json(),
   ],
 });
 

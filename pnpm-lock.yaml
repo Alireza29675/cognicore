@@ -125,6 +125,7 @@ importers:
   tooling/rollup-config:
     specifiers:
       '@rollup/plugin-commonjs': ^24.0.0
+      '@rollup/plugin-json': ^6.0.0
       '@rollup/plugin-node-resolve': ^15.0.1
       '@rollup/plugin-replace': ^5.0.2
       '@rollup/plugin-terser': ^0.3.0
@@ -135,6 +136,7 @@ importers:
       typescript: ^4.9.4
     devDependencies:
       '@rollup/plugin-commonjs': 24.0.1_rollup@3.20.2
+      '@rollup/plugin-json': 6.0.0_rollup@3.20.2
       '@rollup/plugin-node-resolve': 15.0.2_rollup@3.20.2
       '@rollup/plugin-replace': 5.0.2_rollup@3.20.2
       '@rollup/plugin-terser': 0.3.0_rollup@3.20.2
@@ -506,6 +508,19 @@ packages:
       glob: 8.1.0
       is-reference: 1.2.1
       magic-string: 0.27.0
+      rollup: 3.20.2
+    dev: true
+
+  /@rollup/plugin-json/6.0.0_rollup@3.20.2:
+    resolution: {integrity: sha512-i/4C5Jrdr1XUarRhVu27EEwjt4GObltD7c+MkCIpO2QIbojw8MUs+CCTqOphQi3Qtg1FLmYt+l+6YeoIf51J7w==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.0.2_rollup@3.20.2
       rollup: 3.20.2
     dev: true
 
