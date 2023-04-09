@@ -41,6 +41,26 @@ chat.usage.total // => Total amount of tokens used
 chat.usage.cost // => Total cost of tokens used based on the current OpenAI pricing and model you're using
 ```
 
-## Open an issue
+## Development
+
+You should use pnpm to develop this package. Start by installing it globally:
+
+```bash
+npm install -g pnpm
+```
+
+Then install the dependencies:
+
+```bash
+pnpm install
+```
+
+and finally run the whole development environment at once:
+
+```bash
+pnpm dev
+```
+
+## ⚠️ Open an issue
 
 This package is still in development. If you find any bugs or have any suggestions, please open an issue.
