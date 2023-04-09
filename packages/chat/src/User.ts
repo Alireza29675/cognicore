@@ -7,11 +7,14 @@ class User {
   role: 'user' | 'assistant';
 
   constructor(chat: Chat, role: 'user' | 'assistant' = 'user') {
+    // Assigns the chat parameter to the protected chat property and stores the role in the role property
     this.chat = chat;
+    // Generates a unique ID for the user by combining the role and a UUID
     this.id = role + '-' + uuid();
     this.role = role;
   }
 
+  // Writes a message to the chat with the user's role, content, and name
   write(message: string): User {
     this.chat.messages.push({
       role: this.role,

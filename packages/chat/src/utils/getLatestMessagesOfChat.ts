@@ -1,6 +1,7 @@
 import Chat from '../Chat';
 import { TMessage } from '../types';
 
+// Gets the latest n messages of a chat
 const getLatestMessagesOfChat = (chat: Chat): TMessage[] => {
   let messages: TMessage[] = [];
 
