@@ -4,25 +4,29 @@ import openai from '@gptkit/core';
 import { TMessage } from './types';
 
 class Assistant extends User {
+  // Constructor for Assistant class, which extends User class
   constructor(chat: Chat) {
     super(chat, 'assistant');
   }
 
+  // Generates a message using OpenAI
   async generate(): Promise<TMessage | undefined> {
+    // Creates chat completion using chat options, latest messages, and user ID
     const { data } = await openai.createChatCompletion({
       ...this.chat.options,
       messages: this.chat.latestMessages,
       user: this.id,
     });
 
+    // Gets the message from the data
     const message: TMessage | undefined = data.choices[0].message;
 
-    // Add message to chat
+    // If the message exists, adds it to the chat
     if (message) {
       this.chat.messages.push(message);
     }
 
-    // Add usage data to tracker
+    // Adds usage data to the tracker
     if (data.usage) {
       this.chat.usage.add(data.usage);
     }
