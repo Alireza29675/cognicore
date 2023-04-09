@@ -1,4 +1,21 @@
 html, body {
   margin: 0;
   padding: 0;
+
+  /* Colors */
+  --primary-color: #41D9E1ff;
+  --secondary-color: #6C65B0ff;
+  --secondary-darker-color: #3B5684ff;
+  --primary-darker-color: #2B5066ff;
+  --grey-400: #2D3136ff;
+  --grey-300: #282E34ff;
+  --grey-200: #1B1E22ff;
+  --grey-100: #0E151Bff;
+  --black: #010508ff;
+}
+
+body {
+  background-color: var(--grey-100);
+  color: white;
+  font-family: 'Inter', sans-serif;
 }
