@@ -1,8 +1,8 @@
 <p align="center">
-  <img width="300" src="https://user-images.githubusercontent.com/2771377/230775287-fd5460cc-7a64-449e-b094-2db213aefae4.png" />
+  <img width="300" src="https://user-images.githubusercontent.com/2771377/230775287-fd5460cc-7a64-449e-b094-2db213aefae4.png" alt="GPTKit Logo" />
 </p>
 
-# GPTKit - Tools for building and deploying GPT powered apps
+# GPTKit - Tools for building GPT powered apps over Typescript
 
 ## Installation
 
@@ -61,6 +61,6 @@ and finally run the whole development environment at once:
 pnpm dev
 ```
 
-## ⚠️ Open an issue
+## ⚠️ This package is still in development
 
 This package is still in development. If you find any bugs or have any suggestions, please open an issue.
