@@ -1,4 +1,5 @@
 import styles from './Sidebar.module.css';
+import cx from 'classnames';
 
 interface IProps {
   pages: IPageModule[];
@@ -14,10 +15,14 @@ function Sidebar({ pages }: IProps) {
           <span className={styles.chip}>dev</span>
         </div>
       </header>
-      <ul>
+      <ul className={styles.pagesList}>
         {pages.map(({ metadata }) => (
-          <li key={metadata.route}>
-            <a href={metadata.route}>{metadata.title}</a>
+          <li key={metadata.route} className={cx(styles.item,
+            {
+              [styles.active]: window.location.pathname === `/${metadata.route}`,
+            }
+          )}>
+            <a className={styles.link} href={metadata.route}>{metadata.title}</a>
           </li>
         ))}
       </ul>

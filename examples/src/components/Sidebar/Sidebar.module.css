@@ -13,6 +13,7 @@
     
     .logo {
       width: 60px;
+      height: 60px;
     }
 
     .title {
@@ -27,6 +28,52 @@
       padding: 0.1rem 0.5rem;
       font-size: 0.8rem;
       border-radius: 0.2rem;
+    }
+  }
+
+  .pagesList {
+    padding: 0 2rem;
+    margin: 0;
+    list-style: none;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--secondary-color);
+      }
+
+      .link {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: bold;
+        transition: color 0.1s;
+
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+
+      &.active {
+        padding: 0.5rem 0;
+
+        &:before {
+          width: 10px;
+        }
+
+        .link {
+          color: var(--secondary-color);
+        }
+      }
     }
   }
 }

@@ -35,6 +35,7 @@ importers:
       '@types/react': ^18.0.28
       '@types/react-dom': ^18.0.11
       '@vitejs/plugin-react-swc': ^3.0.0
+      classnames: ^2.3.2
       gptkit: workspace:*
       postcss-nesting: ^11.2.2
       react: ^18.2.0
@@ -42,6 +43,7 @@ importers:
       typescript: ^4.9.3
       vite: ^4.2.0
     dependencies:
+      classnames: 2.3.2
       gptkit: link:../packages/gptkit
       postcss-nesting: 11.2.2
       react: 18.2.0
@@ -1081,6 +1083,10 @@ packages:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
     dev: true
+
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
+    dev: false
 
   /cliui/8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
