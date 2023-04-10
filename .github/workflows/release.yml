@@ -28,8 +28,15 @@ jobs:
       - name: Run tests
         run: pnpm test
 
-      - name: Semantic Release
-        run: npx semantic-release
+      - name: Build
+        run: pnpm build
+
+      - name: Create Release
+        id: changesets
+        uses: ./
+        with:
+          version: pnpm run bump
+          publish: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
