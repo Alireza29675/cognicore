@@ -1,6 +1,6 @@
 {
   "name": "@gptkit/monorepo",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Tools for building and deploying GPT powered apps",
   "repository": "https://github.com/Alireza29675/gptkit",
   "license": "MIT",
