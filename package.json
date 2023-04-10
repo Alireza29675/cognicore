@@ -15,11 +15,6 @@
     "clean": "pnpm -r --parallel exec rimraf dist .turbo node_modules"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^10.0.3",
-    "@semantic-release/release-notes-generator": "^10.0.3",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "concurrently": "^7.6.0",
@@ -31,7 +26,6 @@
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "rollup": "^3.9.1",
-    "semantic-release": "^21.0.1",
     "turbo": "^1.7.0",
     "typescript": "^4.9.4"
   }
