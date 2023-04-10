@@ -32,8 +32,6 @@ jobs:
         run: pnpm build
 
       - name: Create Release
-        id: changesets
-        uses: ./
         with:
           version: pnpm run bump
           publish: pnpm run release
