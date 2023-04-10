@@ -1,12 +1,15 @@
 name: Create diagram
 on:
   workflow_dispatch: {}
-  push:
+  pull_request:
     branches:
       - main
+    types:
+      - closed
 jobs:
   get_data:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
       - name: Checkout code
         uses: actions/checkout@master
@@ -17,4 +20,5 @@ jobs:
         with:
           output_file: "VISUALIZED_CODEBASE.svg"
           commit_message: "docs: update codebase diagram"
-          excluded_paths: "ignore,.github"
+          root_path: "packages/"
+          excluded_globs: "**/*.json"
