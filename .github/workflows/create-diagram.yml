@@ -17,4 +17,4 @@ jobs:
         with:
           output_file: "VISUALIZED_CODEBASE.svg"
           commit_message: "docs: update codebase diagram"
-          excluded_paths: "ignore,.github"
+          excluded_paths: ".github"
