@@ -1,6 +1,9 @@
 name: Create diagram
-on: push
-
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
 jobs:
   get_data:
     runs-on: ubuntu-latest
@@ -12,6 +15,6 @@ jobs:
       - name: Update diagram
         uses: githubocto/repo-visualizer@main
         with:
-          output_file: "./VISUALIZED_CODEBASE.svg"
+          output_file: "VISUALIZED_CODEBASE.svg"
           commit_message: "docs: update codebase diagram"
           excluded_paths: "ignore,.github"
