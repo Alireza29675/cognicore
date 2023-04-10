@@ -31,10 +31,11 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Create Release
-        with:
-          version: pnpm run bump
-          publish: pnpm run release
+      - name: Bump version
+        run: pnpm run bump
+
+      - name: Create Release and publish to npm
+        run: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
