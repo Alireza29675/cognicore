@@ -8,13 +8,18 @@ interface OpenAIApiWithIndexSignature extends OpenAIApi {
 class Core {
   private configuration = new Configuration();
   private _unproxiedOpenAI = new OpenAIApi(this.configuration) as OpenAIApiWithIndexSignature;
+  // Create a proxy for the openai instance to intercept requests and responses
   openai = new Proxy(this._unproxiedOpenAI, {
     get: (target, prop) => {
       const method = target[prop];
-      if (method && typeof method === 'function') {
+      // Only intercept methods
+      if (typeof method === 'function') {
+        // Return a function that intercepts the request and response
         return (...args: unknown[]) => {
           this.onRequest(args);
           const result = method.apply(target, args);
+          // Whether the result is a promise or not, intercept the response
+          // and call the onResponse method with the returned result
           Promise.resolve(result).then(this.onResponse);
           return result;
         }
@@ -37,6 +42,7 @@ class Core {
     console.log(request);
   }
 
+  // TODO: measuring the usage goes here
   private async onResponse(result: unknown) {
     console.log(result);
   }
