@@ -42,6 +42,7 @@
       align-items: center;
       gap: 1rem;
       padding: 1rem 0;
+      transition-duration: 0.2s;
 
       &:before {
         content: '';
@@ -49,7 +50,8 @@
         width: 4px;
         height: 4px;
         border-radius: 2px;
-        background-color: var(--secondary-color);
+        background: linear-gradient(90deg, var(--secondary-color), var(--grey-100));
+        transition-duration: 0.2s;
       }
 
       .link {
@@ -57,7 +59,7 @@
         text-decoration: none;
         font-size: 0.9rem;
         font-weight: bold;
-        transition: color 0.1s;
+        transition-duration: 0.2s;
 
         &:hover {
           color: var(--secondary-color);
@@ -65,10 +67,10 @@
       }
 
       &.active {
-        padding: 0.5rem 0;
+        gap: 0.5rem;
 
         &:before {
-          width: 10px;
+          width: 2rem;
         }
 
         .link {

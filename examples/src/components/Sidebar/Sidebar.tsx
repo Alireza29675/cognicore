@@ -3,9 +3,10 @@ import cx from 'classnames';
 
 interface IProps {
   pages: IPageModule[];
+  active: IPageModule | null;
 }
 
-function Sidebar({ pages }: IProps) {
+function Sidebar({ pages, active }: IProps) {
   return (
     <aside className={styles.Sidebar}>
       <header className={styles.header}>
@@ -16,13 +17,13 @@ function Sidebar({ pages }: IProps) {
         </div>
       </header>
       <ul className={styles.pagesList}>
-        {pages.map(({ metadata }) => (
-          <li key={metadata.route} className={cx(styles.item,
+        {pages.map((page) => (
+          <li key={page.metadata.route} className={cx(styles.item,
             {
-              [styles.active]: window.location.pathname === `/${metadata.route}`,
+              [styles.active]: active?.metadata.route === page.metadata.route
             }
           )}>
-            <a className={styles.link} href={metadata.route}>{metadata.title}</a>
+            <a className={styles.link} href={'#' + page.metadata.route}>{page.metadata.title}</a>
           </li>
         ))}
       </ul>
