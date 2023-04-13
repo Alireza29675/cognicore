@@ -10,7 +10,9 @@ function Sidebar({ pages, active }: IProps) {
   return (
     <aside className={styles.Sidebar}>
       <header className={styles.header}>
-        <img className={styles.logo} src="/images/gptkit-logo.png" alt="GPTKit" />
+        <a className={styles.link} href="#">
+          <img className={styles.logo} src="/images/gptkit-logo.png" alt="GPTKit" />
+        </a>
         <div>
           <h1 className={styles.title}>GPTKit</h1>
           <span className={styles.chip}>dev</span>

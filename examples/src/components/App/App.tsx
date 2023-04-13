@@ -2,21 +2,24 @@ import { getPages } from '@/utils/dynamicLoader';
 import Sidebar from '../Sidebar';
 import styles from './App.module.css';
 import { useEffect, useState } from 'react';
+import Intro from '../Intro';
 
 function App() {
   const [examplePages, setExamplePages] = useState<IPageModule[]>([]);
   const [activePage, setActivePage] = useState<IPageModule | null>(null);
 
   useEffect(() => {
-    const setHash = () => {
+    // Set active page based on window.location.hash
+    const setActive = () => {
       const hash = window.location.hash;
-      const page = examplePages.find((page) => page.metadata.route === hash.slice(1));
+      const page = examplePages.find(page => page.metadata.route === hash.slice(1));
       setActivePage(page || null);
-    }
-    setHash();
-    window.addEventListener('hashchange', setHash);
-    return () => window.removeEventListener('hashchange', setHash);
+    };
+    setActive();
+    window.addEventListener('hashchange', setActive);
+    return () => window.removeEventListener('hashchange', setActive);
   }, [examplePages]);
+
 
   useEffect(() => {
     getPages().then((pages) => setExamplePages(pages));
@@ -26,7 +29,7 @@ function App() {
     <div className={styles.App}>
       <Sidebar pages={examplePages} active={activePage} />
       <div className={styles.Content}>
-        {activePage && <activePage.component />}
+        {activePage ? <activePage.component /> : <Intro />}
       </div>
     </div>
   );
