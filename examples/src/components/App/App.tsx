@@ -1,8 +1,8 @@
 import { getPages } from '@/utils/dynamicLoader';
-import Sidebar from '../Sidebar';
+import Sidebar from './Sidebar';
 import styles from './App.module.css';
 import { useEffect, useState } from 'react';
-import Intro from '../Intro';
+import Intro from './Intro';
 
 function App() {
   const [examplePages, setExamplePages] = useState<IPageModule[]>([]);

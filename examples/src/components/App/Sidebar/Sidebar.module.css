@@ -19,6 +19,9 @@
     .title {
       margin: 0;
       margin-bottom: 0.3rem;
+      font-weight: bolder;
+      font-size: 1.5rem;
+      padding: 0.25rem 0;
     }
 
     .chip {

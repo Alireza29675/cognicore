@@ -1,0 +1,25 @@
+.Intro {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .message {
+    font-size: 1.1rem;
+    color: var(--grey-600);
+    text-align: center;
+  }
+
+  .input {
+    font-size: 0.8rem;
+    color: var(--grey-800);
+    background-color: var(--grey-200);
+    padding: 0.5rem 0.8rem;
+    width: calc(100% - 1.6rem);
+    min-width: 350px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+}
