@@ -1,3 +1,5 @@
+@import 'reset-css';
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,6 +9,12 @@ html, body {
   --secondary-color: #6C65B0ff;
   --secondary-darker-color: #3B5684ff;
   --primary-darker-color: #2B5066ff;
+  --white: #efefef;
+  --grey-900: #F2F2F2ff;
+  --grey-800: #E5E5E5ff;
+  --grey-700: #D8D8D8ff;
+  --grey-600: #CBCBCBff;
+  --grey-500: #3A3F46ff;
   --grey-400: #2D3136ff;
   --grey-300: #282E34ff;
   --grey-200: #1B1E22ff;
@@ -23,4 +31,13 @@ body {
 ::selection {
   background-color: var(--secondary-color);
   color: var(--black);
+}
+
+a, a:link, a:visited {
+  color: var(--grey-600);
+  font-weight: 600;
+
+  &:hover {
+    color: var(--white);
+  }
 }
