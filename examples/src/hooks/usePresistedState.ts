@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 
+const PREFIX = '__gptkit_dev_';
+
 const usePersistedState = <T>(key: string, initialState: T) => {
   const [state, setState] = useState((() => {
-    const storageValue = localStorage.getItem(key)
+    const storageValue = localStorage.getItem(PREFIX + key)
 
     if (storageValue) {
       return JSON.parse(storageValue) as T
@@ -12,7 +14,7 @@ const usePersistedState = <T>(key: string, initialState: T) => {
   })());
 
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(state))
+    localStorage.setItem(PREFIX + key, JSON.stringify(state))
   }, [key, state]);
 
   return [state, setState] as const

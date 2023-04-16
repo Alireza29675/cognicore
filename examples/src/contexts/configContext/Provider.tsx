@@ -1,8 +1,10 @@
-import usePersistedState from "../../hooks/usePresistedState";
-import { Provider } from "./context";
+import usePersistedState from "@/hooks/usePresistedState";
+import configContext from ".";
+
+const Provider = configContext.Provider;
 
 export default function ConfigProvider({ children }: { children: React.ReactNode }) {
-  const [config, setConfig] = usePersistedState<IConfig>('__gptkit_dev_config', {
+  const [config, setConfig] = usePersistedState<IConfig>('config', {
     apiKey: '',
   });
 

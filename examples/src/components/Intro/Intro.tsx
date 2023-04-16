@@ -1,4 +1,4 @@
-import { useConfig } from '../context/config';
+import useConfig from '@/hooks/useConfig';
 import styles from './Intro.module.css';
 
 function Intro() {
