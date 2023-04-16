@@ -1,28 +1,33 @@
+import ApiKeyManager from './ApiKeyManager';
 import styles from './Sidebar.module.css';
 import cx from 'classnames';
 
 interface IProps {
   pages: IPageModule[];
+  active: IPageModule | null;
 }
 
-function Sidebar({ pages }: IProps) {
+function Sidebar({ pages, active }: IProps) {
   return (
     <aside className={styles.Sidebar}>
       <header className={styles.header}>
-        <img className={styles.logo} src="/images/gptkit-logo.png" alt="GPTKit" />
+        <a className={styles.link} href="#">
+          <img className={styles.logo} src="/images/gptkit-logo.png" alt="GPTKit" />
+        </a>
         <div>
           <h1 className={styles.title}>GPTKit</h1>
           <span className={styles.chip}>dev</span>
         </div>
       </header>
+      <ApiKeyManager />
       <ul className={styles.pagesList}>
-        {pages.map(({ metadata }) => (
-          <li key={metadata.route} className={cx(styles.item,
+        {pages.map((page) => (
+          <li key={page.metadata.route} className={cx(styles.item,
             {
-              [styles.active]: window.location.pathname === `/${metadata.route}`,
+              [styles.active]: active?.metadata.route === page.metadata.route
             }
           )}>
-            <a className={styles.link} href={metadata.route}>{metadata.title}</a>
+            <a className={styles.link} href={'#' + page.metadata.route}>{page.metadata.title}</a>
           </li>
         ))}
       </ul>
