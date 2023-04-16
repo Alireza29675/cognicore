@@ -95,8 +95,10 @@ const theme = createTheme({
     },
     MuiIconButton: {
       styleOverrides: {
-        disabled: {
-          opacity: 0.8,
+        root: {
+          '&.Mui-disabled': {
+            opacity: 0.8,
+          },
         },
         colorSecondary: {
           color: textPrimary,
