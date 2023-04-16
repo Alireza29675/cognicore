@@ -3,7 +3,6 @@ import styles from './App.module.css';
 import { useEffect, useState } from 'react';
 import Sidebar from './Sidebar';
 import Intro from './Intro';
-import { ConfigProvider } from '../contexts/configContext';
 
 function App() {
   const [examplePages, setExamplePages] = useState<IPageModule[]>([]);
@@ -27,14 +26,12 @@ function App() {
   }, [])
 
   return (
-    <ConfigProvider>
-      <div className={styles.App}>
-        <Sidebar pages={examplePages} active={activePage} />
-        <div className={styles.Content}>
-          {activePage ? <activePage.component /> : <Intro />}
-        </div>
+    <div className={styles.App}>
+      <Sidebar pages={examplePages} active={activePage} />
+      <div className={styles.Content}>
+        {activePage ? <activePage.component /> : <Intro />}
       </div>
-    </ConfigProvider>
+    </div>
   );
 }
 
