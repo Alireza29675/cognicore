@@ -1,3 +1,4 @@
+import ApiKeyManager from './ApiKeyManager';
 import styles from './Sidebar.module.css';
 import cx from 'classnames';
 
@@ -18,6 +19,7 @@ function Sidebar({ pages, active }: IProps) {
           <span className={styles.chip}>dev</span>
         </div>
       </header>
+      <ApiKeyManager />
       <ul className={styles.pagesList}>
         {pages.map((page) => (
           <li key={page.metadata.route} className={cx(styles.item,
