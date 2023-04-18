@@ -1,6 +1,6 @@
 {
-  "extends": "@gptkit/tsconfig/base.json",
-  "display": "gptkit",
+  "extends": "@cognicore/tsconfig/base.json",
+  "display": "cognicore",
   "compilerOptions": {
     "declaration": true,
   },

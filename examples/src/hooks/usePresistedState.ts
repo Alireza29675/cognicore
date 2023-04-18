@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const PREFIX = '__gptkit_dev_';
+const PREFIX = '__cognicore_dev_';
 
 const usePersistedState = <T>(key: string, initialState: T) => {
   const [state, setState] = useState((() => {

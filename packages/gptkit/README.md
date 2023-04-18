@@ -1,9 +1,9 @@
-# GPTKit - Tools for building GPT powered apps over Typescript
+# CogniCore - Tools for building GPT powered apps over Typescript
 
 ## Installation
 
 ```bash
-npm install gptkit
+npm install cognicore
 ```
 
 ## How to use
@@ -11,7 +11,7 @@ npm install gptkit
 ### Create a chat
 
 ```ts
-import { createChat, setOpenAIKey } from 'gptkit'
+import { createChat, setOpenAIKey } from 'cognicore'
 
 setOpenAIKey('sk-...');
 

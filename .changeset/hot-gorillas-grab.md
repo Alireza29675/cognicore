@@ -1,7 +1,7 @@
 ---
-'@gptkit/chat': minor
-'@gptkit/core': minor
-'gptkit': minor
+'@cognicore/chat': minor
+'@cognicore/core': minor
+'cognicore': minor
 ---
 
 Initiating very first packages
