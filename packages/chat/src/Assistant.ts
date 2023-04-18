@@ -1,6 +1,6 @@
 import Chat from './Chat';
 import User from './User';
-import openai from '@gptkit/core';
+import openai from '@cognicore/core';
 import { TMessage } from './types';
 
 class Assistant extends User {

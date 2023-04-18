@@ -1,7 +1,7 @@
 {
-  "name": "@gptkit/chat",
+  "name": "@cognicore/chat",
   "version": "0.0.0",
-  "description": "Chat related utilities for GPTKit",
+  "description": "Chat related utilities for CogniCore",
   "source": "src/index.ts",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
@@ -11,24 +11,24 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "rollup --config node:@gptkit/rollup-config --watch",
-    "build": "rollup --config node:@gptkit/rollup-config --environment NODE_ENV:production",
+    "dev": "rollup --config node:@cognicore/rollup-config --watch",
+    "build": "rollup --config node:@cognicore/rollup-config --environment NODE_ENV:production",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@gptkit/eslint-config": "workspace:*",
-    "@gptkit/rollup-config": "workspace:*",
-    "@gptkit/tsconfig": "workspace:*",
+    "@cognicore/eslint-config": "workspace:*",
+    "@cognicore/rollup-config": "workspace:*",
+    "@cognicore/tsconfig": "workspace:*",
     "@types/node": "^18.7.16",
     "@types/uuid": "^9.0.1",
     "typescript": "^4.9.4"
   },
   "rollup": {
-    "name": "GPTKitChat"
+    "name": "CogniCoreChat"
   },
   "dependencies": {
-    "@gptkit/core": "workspace:*",
+    "@cognicore/core": "workspace:*",
     "openai": "^3.2.1",
     "uuid": "^9.0.0"
   }

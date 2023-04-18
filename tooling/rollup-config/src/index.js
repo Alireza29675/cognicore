@@ -61,7 +61,7 @@ export const umdConfig = defineConfig({
     file: pkg.main,
     format: 'umd',
     exports: 'named',
-    name: pkg.rollup?.name || 'GPTKit',
+    name: pkg.rollup?.name || 'CogniCore',
     globals,
   },
   onwarn,

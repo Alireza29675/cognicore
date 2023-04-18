@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Simple Chatbot',
+  title: 'Simple Chatbot', cognicore
   route: 'simple-chatbot',
 }
 

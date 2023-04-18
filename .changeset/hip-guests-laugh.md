@@ -1,5 +1,5 @@
 ---
-'@gptkit/examples': minor
+'@cognicore/examples': minor
 ---
 
 Basic example page created

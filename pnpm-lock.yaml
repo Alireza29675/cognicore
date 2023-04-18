@@ -64,9 +64,9 @@ importers:
       classnames:
         specifier: ^2.3.2
         version: 2.3.2
-      gptkit:
+      cognicore:
         specifier: workspace:*
-        version: link:../packages/gptkit
+        version: link:../packages/cognicore
       postcss-nesting:
         specifier: ^11.2.2
         version: 11.2.2(postcss@8.4.21)
@@ -98,7 +98,7 @@ importers:
 
   packages/chat:
     dependencies:
-      '@gptkit/core':
+      '@cognicore/core':
         specifier: workspace:*
         version: link:../core
       openai:
@@ -108,13 +108,13 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
     devDependencies:
-      '@gptkit/eslint-config':
+      '@cognicore/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint-config
-      '@gptkit/rollup-config':
+      '@cognicore/rollup-config':
         specifier: workspace:*
         version: link:../../tooling/rollup-config
-      '@gptkit/tsconfig':
+      '@cognicore/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/tsconfig
       '@types/node':
@@ -133,13 +133,13 @@ importers:
         specifier: ^3.2.1
         version: 3.2.1
     devDependencies:
-      '@gptkit/eslint-config':
+      '@cognicore/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint-config
-      '@gptkit/rollup-config':
+      '@cognicore/rollup-config':
         specifier: workspace:*
         version: link:../../tooling/rollup-config
-      '@gptkit/tsconfig':
+      '@cognicore/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/tsconfig
       '@types/node':
@@ -149,22 +149,22 @@ importers:
         specifier: ^4.9.4
         version: 4.9.5
 
-  packages/gptkit:
+  packages/cognicore:
     dependencies:
-      '@gptkit/chat':
+      '@cognicore/chat':
         specifier: workspace:*
         version: link:../chat
-      '@gptkit/core':
+      '@cognicore/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
-      '@gptkit/eslint-config':
+      '@cognicore/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint-config
-      '@gptkit/rollup-config':
+      '@cognicore/rollup-config':
         specifier: workspace:*
         version: link:../../tooling/rollup-config
-      '@gptkit/tsconfig':
+      '@cognicore/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/tsconfig
       '@types/node':
