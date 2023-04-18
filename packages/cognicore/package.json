@@ -1,7 +1,7 @@
 {
   "name": "cognicore",
   "version": "0.0.0",
-  "description": "Tools for building and deploying GPT powered apps",
+  "description": "Streamlined LLM integration for TypeScript applications",
   "source": "src/index.ts",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",

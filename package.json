@@ -1,7 +1,7 @@
 {
   "name": "@cognicore/monorepo",
   "version": "1.0.0",
-  "description": "Tools for building and deploying GPT powered apps",
+  "description": "Streamlined LLM integration for TypeScript applications",
   "repository": "https://github.com/Alireza29675/cognicore",
   "license": "MIT",
   "private": true,
