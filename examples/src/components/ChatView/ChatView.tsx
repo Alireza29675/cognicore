@@ -8,13 +8,11 @@ interface IProps {
 
 function ChatView({ messages }: IProps) {
   return (
-    <div className={styles.ChatView}>
-      <ul>
-        {messages.map((message, index) => {
-          return <ChatMessage key={index} message={message} />
-        })}
-      </ul>
-    </div>
+    <ul className={styles.ChatView}>
+      {messages.map((message, index) => {
+        return <ChatMessage key={index} message={message} />
+      })}
+    </ul>
   );
 }
 
