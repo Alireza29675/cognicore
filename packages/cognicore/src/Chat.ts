@@ -33,7 +33,7 @@ type ToolUse = {
   result: object | null;
 }
 
-type Message = Context | ToolUse | ChatMessage;
+export type Message = Context | ToolUse | ChatMessage;
 
 export default class Chat {
   protected model: ChatModel = 'gpt-3.5-turbo-0613';

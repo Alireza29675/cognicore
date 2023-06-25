@@ -1,5 +1,6 @@
+import ChatView from "@/components/ChatView/ChatView";
 import { Chat } from "cognicore";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 export const metadata = {
   title: 'Simple Chatbot',
@@ -10,10 +11,19 @@ type Messages = typeof Chat.prototype.messages;
 
 export default function SimpleChatbot() {
   const chat = useRef<Chat>(new Chat());
+  const input = useRef<HTMLInputElement>(null);
   const [messages, setMessages] = useState<Messages>([]);
 
-  useEffect(() => {
-    chat.current.call('Hello World').then(() => {
+  const send = useCallback(() => {
+    const value = input.current?.value;
+
+    if (!value) {
+      return;
+    }
+
+    input.current!.value = '';
+
+    chat.current.call(value).then(() => {
       setMessages(chat.current.messages);
     });
   }, []);
@@ -21,11 +31,9 @@ export default function SimpleChatbot() {
   return (
     <div>
       <h1>SimpleChatbot</h1>
-      <ul>
-        {messages.map((message, index) => (
-          <li key={index}>{message.role}</li>
-        ))}
-      </ul>
+      <ChatView messages={messages} />
+      <input ref={input} />
+      <button onClick={send}>Send</button>
     </div>
   )
 }
