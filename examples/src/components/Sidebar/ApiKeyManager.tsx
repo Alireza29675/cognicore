@@ -2,13 +2,16 @@ import { useCallback, useEffect, useState } from 'react';
 import styles from './ApiKeyManager.module.css';
 import Dialog from '@mui/material/Dialog';
 import Button from '@mui/material/Button';
+import { setApiKey } from 'cognicore';
+import cx from 'classnames';
+
 import TextField from '@mui/material/TextField';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
+
 import useConfig from '@/hooks/useConfig';
-import cx from 'classnames';
 
 function ApiKeyManager() {
   const { config, modifyConfig } = useConfig();
@@ -26,6 +29,7 @@ function ApiKeyManager() {
   }, [modifyConfig]);
 
   useEffect(() => {
+    setApiKey(config.apiKey);
     setApiKeyInput(config.apiKey);
   }, [config.apiKey]);
 

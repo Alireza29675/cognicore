@@ -1,6 +1,0 @@
-{
-  "extends": "@cognicore/tsconfig/base.json",
-  "display": "@cognicore/core",
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "dist"]
-}

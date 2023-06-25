@@ -17,8 +17,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@cognicore/core": "workspace:*",
-    "@cognicore/chat": "workspace:*"
+    "axios": "^1.4.0"
   },
   "devDependencies": {
     "@cognicore/eslint-config": "workspace:*",
